@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace ApiQuiz.Data
 {
@@ -14,8 +15,24 @@ namespace ApiQuiz.Data
 
     public class Question
     {
+        [JsonPropertyName("question")]
         public string question { get; set; }
+        [JsonPropertyName("correct_answer")]
         public string goodAnswer { get; set; }
-        public string[] badAnswer { get; set; }
+        [JsonPropertyName("incorrect_answers")]
+        public List<string> badAnswer { get; set; }
+
+
+        public override string ToString()
+        {
+            string output = $"{question},\nGood answer: {goodAnswer}\nBad answer:\n";
+
+            foreach(var b in badAnswer)
+            {
+                output += b.ToString() + "\n";
+            }
+            output += "\n\n";
+            return output;
+        }
     }
 }

@@ -9,9 +9,11 @@ public class TestApi
     [Fact]
     public void FetchData()
     {
+          const int size = 11;
+
           UrlBuilder builder = new UrlBuilder()
                               .SetCategory(Category.History)  
-                              .SetAmount(10);
+                              .SetAmount(size);
 
           Api service = new Api(builder);
 
@@ -19,6 +21,12 @@ public class TestApi
           List<Question> questions = task.Result
                                          .ToList<Question>();
           
-          Assert.True(10 == questions.Count);
+          Assert.True(size == questions.Count);
+
+          foreach(Question q in questions)
+          {
+            Console.WriteLine(q.ToString());
+          }
+          
     }
 }
