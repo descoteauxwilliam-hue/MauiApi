@@ -1,8 +1,8 @@
 
 
 <Solution>
+  <Project Path="ApiQuiz.Logic/ApiQuiz.Logic.csproj" />
 
   <Project Path="ApiQuiz/ApiQuiz.csproj" />
-  <Project Path="ApiQuiz.Tests/ApiQuiz.Tests.csproj" />
   <Project Path="Test.Test/Test.Test.csproj" />
 </Solution>

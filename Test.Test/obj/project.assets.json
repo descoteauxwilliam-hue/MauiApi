@@ -393,6 +393,16 @@
         "build": {
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "ApiQuiz.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ApiQuiz.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApiQuiz.Logic.dll": {}
+        }
       }
     }
   },
@@ -903,10 +913,16 @@
         "xunit.runner.visualstudio.3.1.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "ApiQuiz.Logic/1.0.0": {
+      "type": "project",
+      "path": "../ApiQuiz.Logic/ApiQuiz.Logic.csproj",
+      "msbuildProject": "../ApiQuiz.Logic/ApiQuiz.Logic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "ApiQuiz.Logic >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
@@ -914,31 +930,42 @@
     ]
   },
   "packageFolders": {
-    "/home/lililatortue/.nuget/packages/": {}
+    "C:\\Users\\willd\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lililatortue/Dev/C#/school/QuizApi/Test.Test/Test.Test.csproj",
+      "projectUniqueName": "C:\\Users\\willd\\source\\repos\\school\\maui\\ApiQuiz\\Test.Test\\Test.Test.csproj",
       "projectName": "Test.Test",
-      "projectPath": "/home/lililatortue/Dev/C#/school/QuizApi/Test.Test/Test.Test.csproj",
-      "packagesPath": "/home/lililatortue/.nuget/packages/",
-      "outputPath": "/home/lililatortue/Dev/C#/school/QuizApi/Test.Test/obj/",
+      "projectPath": "C:\\Users\\willd\\source\\repos\\school\\maui\\ApiQuiz\\Test.Test\\Test.Test.csproj",
+      "packagesPath": "C:\\Users\\willd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\willd\\source\\repos\\school\\maui\\ApiQuiz\\Test.Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/lililatortue/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\willd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "/usr/lib64/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\willd\\source\\repos\\school\\maui\\ApiQuiz\\ApiQuiz.Logic\\ApiQuiz.Logic.csproj": {
+              "projectPath": "C:\\Users\\willd\\source\\repos\\school\\maui\\ApiQuiz\\ApiQuiz.Logic\\ApiQuiz.Logic.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -990,7 +1017,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

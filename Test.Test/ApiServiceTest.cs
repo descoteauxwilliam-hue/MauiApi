@@ -20,7 +20,5 @@ public class TestApi
                                          .ToList<Question>();
           
           Assert.True(10 == questions.Count);
-
-
     }
 }
