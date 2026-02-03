@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiQuiz.Logic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d96f1932c54bcaec755a175475b2911aa4e8c4c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18cc4a32a577be31c5121008021dcdfb2067d167")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiQuiz.Logic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiQuiz.Logic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
