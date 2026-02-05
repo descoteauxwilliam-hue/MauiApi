@@ -1,8 +1,12 @@
 namespace ApiQuiz;
 
+
 public partial class QuizPage : ContentPage
 {
-	public QuizPage()
+
+    public string category { get; set; }
+    public string amount { get; set; }
+    public QuizPage()
 	{
 		InitializeComponent();
 	}

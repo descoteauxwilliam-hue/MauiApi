@@ -1,4 +1,4 @@
-﻿using ApiQuiz.ApiService;
+﻿using ApiQuiz.Logic.ApiService;
 using ApiQuiz.Data;
 using ApiQuiz.Logic.Data;
 
@@ -8,13 +8,24 @@ namespace Test.Test;
 public class TestApi
 {
     [Fact]
+    public void TestBuilder()
+    {
+        const int size = 11;
+
+        UrlBuilder builder = new UrlBuilder();
+        Assert.True(builder.TrySetCategory("History") == String.Empty );
+        Assert.True(builder.TrySetAmount(size) == String.Empty);
+
+    }
+
+    [Fact]
     public void FetchData()
     {
           const int size = 11;
 
-          UrlBuilder builder = new UrlBuilder()
-                              .SetCategory(Category.History)  
-                              .SetAmount(size);
+        UrlBuilder builder = new UrlBuilder();
+        builder.TrySetCategory("History");  
+        builder.TrySetAmount(size);
 
           Api service = new Api(builder);
 

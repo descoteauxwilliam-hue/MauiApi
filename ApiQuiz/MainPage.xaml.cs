@@ -1,25 +1,22 @@
 ﻿using ApiQuiz.Logic.ApiService;
-using static Android.Graphics.Paint;
-
+using ApiQuiz.ViewModel;
 
 namespace ApiQuiz
 {
     public partial class MainPage : ContentPage
     {
-        
-       
-
-        public MainPage()
+        public MainPage(MainViewModel vm)
         {
             InitializeComponent();
             FillPicker();
-            Routing.RegisterRoute("quizPage", typeof(QuizPage));
+            BindingContext = vm;
+           
         }
-        public async void StartQuiz()
+
+
+        public async void StartQuiz(object? sender, EventArgs args)
         {
-            Category category = GetPickerItem();
-            int amount        = GetAmount(); 
-            await Shell.Current.GoToAsync($"QuizPage?category={category}&amount={amount}");
+           
         }
 
         void FillPicker()
@@ -28,24 +25,6 @@ namespace ApiQuiz
             {
                 PickerCategory.Items.Add(category.ToString());
             }
-        }
-
-        Category GetPickerItem()
-        {
-            var Item = PickerCategory.SelectedItem.ToString();
-            if(Enum.TryParse(Item, out Category cat))
-            {
-                return cat;
-            }
-            throw new Exception();
-        }
-        int GetAmount()
-        {
-            if(int.TryParse(AmountQuestion.Text, out int amount))
-            {
-                return amount;
-            }
-            throw new Exception();
         }
     }
 }
