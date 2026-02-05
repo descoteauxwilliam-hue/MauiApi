@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "ApiQuiz\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\willd\\source\\repos\\school\\maui\\ApiQuiz\\ApiQuiz\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "ApiQuiz\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-05T02:16:47.206Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "ApiQuiz\\MainPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T02:11:42.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T02:11:42.774Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "ApiQuiz\\MainPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-05T02:06:59.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T02:06:59.829Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "ApiQuiz\\QuizPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T02:04:42.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T02:04:42.888Z"
             }
           ]
         }

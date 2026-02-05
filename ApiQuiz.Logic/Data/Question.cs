@@ -1,12 +1,13 @@
 ﻿using ApiQuiz.Logic.Data;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json.Serialization;
 
 namespace ApiQuiz.Data
 {
-    public class Question
+    public class Question: IData<Question>
     {
         string question;
 
@@ -27,5 +28,10 @@ namespace ApiQuiz.Data
         public IEnumerable<(string,bool)> GetAnswers() => answers;
         public (int, string)[] getAnswers() => answers.Select((i,index) => (index, i.Item1)).ToArray();
         public bool IsGoodAnswer(int x) => answers[x].Item2;
+
+        public Question GetData()
+        {
+            return this;
+        }
     } 
 }

@@ -27,10 +27,7 @@ public class TestApi
         builder.TrySetCategory("History");
         builder.TrySetAmount(size);
 
-        UrlBuilder builder = new UrlBuilder();
-        builder.TrySetCategory("History");  
-        builder.TrySetAmount(size);
-
+        Api service = new Api(builder);
         var task = service.fetch();
         List<RawQuestion> questions = task.Result
                                        .ToList<RawQuestion>();

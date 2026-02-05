@@ -40,9 +40,8 @@ namespace ApiQuiz.Logic.ApiService
 
                 return response.results;
             }
-            catch(JsonException e)
+            catch
             {
-                Debug.Write($"{e.Data}");
                 throw new Exception("[bad response] couldn't process response");
             }
         }
