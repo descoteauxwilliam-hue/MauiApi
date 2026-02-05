@@ -27,8 +27,8 @@ namespace ApiQuiz
             builder.Services.AddSingleton<MainViewModel>();
 
 
-            //builder.Services.AddTransient<QuizPage>();
-            //builder.Services.AddTransient<QuizPageViewModel>();
+            builder.Services.AddTransient<QuizPage>();
+            builder.Services.AddTransient<QuizViewModel>();
             return builder.Build();
         }
     }
