@@ -1,54 +1,63 @@
 ﻿using ApiQuiz.Data;
 using ApiQuiz.Logic.ApiService;
-using ApiQuiz.Logic.Data;
 using ApiQuiz.Logic.TimingService;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.AccessControl;
-using System.Text;
+using ApiQuiz.GameService;
 
 namespace ApiQuiz.Logic.GameService
 {
-    public class GameService : IEnumerable<Question>
+    public class GameService :IGame<GameService>, IEnumerable<(int, string)[]>
     {
-        Api api;
-        IData<Question>[] data;
-
-
+        Api _api;
         TimerService timer;
-        int Score;
+
+        Question[] questions;
+        Question?   currentQuestion;
+        int score;
+
 
         public GameService(UrlBuilder builder)
         {
-            api   = new Api(builder);
+            _api   = new Api(builder);
             timer = new TimerService();
+
+            questions = Array.Empty<Question>();
+            currentQuestion = null;
+            score  = 0;
         }
-        public async Task LoadQuestionAsync()
+        public async void LoadQuestionAsync()
         {
-            var result = await api.fetch();
-            this.data = result?.Select(r => r.intoQuestion())
-                               .ToArray() 
-                               ?? Array.Empty<Question>();
-        }
-
-        public Question Next()
-        {
-
+            var result = await _api.fetch();
+            this.questions = result?.Select(r => r.intoQuestion())
+                                    .ToArray() 
+                                    ?? Array.Empty<Question>();
         }
 
 
-        public IEnumerator<Question> GetEnumerator()
+        public void CheckAnswer(int x){
+            if(currentQuestion?.IsGoodAnswer(x) == true) {
+                score += 1;
+            }
+        }
+
+        public IEnumerator<(int, string)[]> GetEnumerator()
         {
-            foreach(var question in this.quiz ?? Array.Empty<Question>())
+            foreach(var q in this.questions)
             {
-                yield return question;
+                currentQuestion = q;
+                yield return q.GetAnswers();
             }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+
+        public GameService play(){
+            this.LoadQuestionAsync();
+            return this;
         }
     }
 }
